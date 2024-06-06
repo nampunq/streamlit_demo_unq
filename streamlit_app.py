@@ -28,7 +28,7 @@ class Net(nn.Module):
 
 # Load pre-trained model
 model = Net()
-model.load_state_dict(torch.load('./files/image_classifier.pth'))
+model.load_state_dict(torch.load('image_classifier.pth'))
 model.eval()
 
 # Class labels
@@ -45,7 +45,6 @@ transform = transforms.Compose([
 
 st.title('Image classifier')
 st.write('This is a website used to deploy a model using Streamlit. We will import a picture and make it predict what it is.')
-st.image('./files/flow.png')
 st.write('Here\'s the model defined in the code:')
 
 code_text = """
